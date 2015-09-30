@@ -9,7 +9,8 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "version": "script/bower_update && git add .",
-    "postversion": "git push && git push --tags && npm publish ."
+    "preversion": "script/bower_update",
+    "version": "git add .",
+    "//": "git push && git push --tags && npm publish ."
   }
 }
