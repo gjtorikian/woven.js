@@ -1,0 +1,10 @@
+{
+  "name": "woven",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "main": "src/woven.js",
+  "keywords": [
+
+  ]
+}
