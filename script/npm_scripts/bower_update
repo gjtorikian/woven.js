@@ -9,13 +9,3 @@ var bower_json = fs.readFileSync('bower.json', 'utf8');
 new_bower_json = bower_json.replace(/"version": .+/, "\"version\": \"" + package_json.version + "\",");
 
 fs.writeFileSync('bower.json', new_bower_json);
-
-exec("git add bower.json && git commit -m 'Bumped bower.json to " + package_json.version + "'", function (error, stdout, stderr) {
-  console.log(stdout);
-  if (stderr) {
-    console.error(stderr);
-  }
-  if (error !== null) {
-    console.error('exec error: ' + error);
-  }
-});

@@ -2,6 +2,10 @@
 
 # head, so that it doesn't interfere with pre-/postversion scripts
 curVersion=$(head -5 package.json | grep version |  awk '{print $2}' | sed 's/"//g' | sed 's/,//g' | tr -d '\n')
+
+# add bower.json and package.json
+git add .
+git commit -m "Release v$curVersion"
 git tag v$curVersion
 git push
 git push --tags
