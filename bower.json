@@ -1,6 +1,6 @@
 {
   "name": "woven",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "",
   "license": "MIT",
   "main": "src/woven.js",
