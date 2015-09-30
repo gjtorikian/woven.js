@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
+var exec = require('child_process').exec;
 
 var package_json = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 var bower_json = fs.readFileSync('bower.json', 'utf8');
@@ -8,3 +9,13 @@ var bower_json = fs.readFileSync('bower.json', 'utf8');
 new_bower_json = bower_json.replace(/"version": .+/, "\"version\": \"" + package_json.version + "\",");
 
 fs.writeFileSync('bower.json', new_bower_json);
+
+exec("git add bower.json && git commit -m 'Bumped bower.json to $npm_package_version'", function (errour, stdout, stderr) {
+  console.log(stdout);
+  if (stderr) {
+    console.error(stderr);
+  }
+  if (error !== null) {
+    console.error('exec error: ' + error);
+  }
+});
