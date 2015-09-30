@@ -1,0 +1,15 @@
+{
+  "name": "woven",
+  "version": "0.0.1",
+  "description": "",
+  "repository": "gjtorikian/woven.js",
+  "main": "dist/woven.js",
+  "license": "MIT",
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "version": "script/bower_update && git add .",
+    "postversion": "git push --tags"
+  }
+}
