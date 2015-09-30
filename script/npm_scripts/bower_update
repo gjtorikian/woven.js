@@ -10,7 +10,7 @@ new_bower_json = bower_json.replace(/"version": .+/, "\"version\": \"" + package
 
 fs.writeFileSync('bower.json', new_bower_json);
 
-exec("git add bower.json && git commit -m 'Bumped bower.json to $npm_package_version'", function (error, stdout, stderr) {
+exec("git add bower.json && git commit -m 'Bumped bower.json to " + package_json.version + "'", function (error, stdout, stderr) {
   console.log(stdout);
   if (stderr) {
     console.error(stderr);
