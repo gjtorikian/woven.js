@@ -10,6 +10,6 @@
   "devDependencies": {},
   "scripts": {
     "version": "script/bower_update && git add -A bower.json",
-    "postversion": "git push && git push --tags && npm publish ."
+    "postversion": "git commit -m 'Bumped bower.json to %s' && git push && git push --tags && npm publish ."
   }
 }
